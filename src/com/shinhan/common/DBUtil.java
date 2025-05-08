@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBUtil {
-	// 김정은 주석 수정해보겠슴돠 
 	// Oracle DB 연결 함수
 	public static Connection getConnection() {
 		Connection conn = null;
