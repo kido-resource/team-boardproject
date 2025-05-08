@@ -17,12 +17,12 @@ public class DeleteController implements CommonControllerInterface {
 			System.out.print("삭제를 원하시는 글번호를 입력하세요. 메인메뉴를 보시려면 0 을 눌러주세요. >>");
 			int check = sc.nextInt();
 			switch (check) {
-			case 0 -> {
-				isStop = true;
-			}
-			default -> {
-				deleteboard_selectByID(check);
-			}
+				case 0 -> {
+					isStop = true;
+				}
+				default -> {
+					deleteboard_selectByID(check);
+				}
 			}
 		}
 	}
@@ -34,24 +34,21 @@ public class DeleteController implements CommonControllerInterface {
 		while(!isStop) {
 			String answer = sc.nextLine().trim();
 			switch(answer) {
-			case "y" -> {
-				int result = boardService.deleteBoardById(check);
-				if(result >= 1) {
-					System.out.println("** 정상적으로 삭제되었습니다. **");
-				}else {
-					System.out.println("** 삭제되지 않았습니다. **");
+				case "y" -> {
+					int result = boardService.deleteBoardById(check);
+					if(result >= 1) {
+						System.out.println("** 정상적으로 삭제되었습니다. **");
+					}else {
+						System.out.println("** 삭제되지 않았습니다. **");
+					}
+					isStop = true;
+					
 				}
-				isStop = true;
-				
+				case "n" -> {
+					System.out.println("** 삭제되지 않았습니다. **");
+					isStop = true;
+				}
 			}
-			case "n" -> {
-				System.out.println("** 삭제되지 않았습니다. **");
-				isStop = true;
-			}
-			}
-			
 		}
-		
-		
 	}
 }

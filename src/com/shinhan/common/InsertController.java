@@ -2,8 +2,6 @@ package com.shinhan.common;
 
 import java.util.Scanner;
 
-import com.shinhan.common.CommonControllerInterface;
-
 public class InsertController implements CommonControllerInterface{
 	
 	static Scanner sc = new Scanner(System.in);

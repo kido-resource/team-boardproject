@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import com.shinhan.common.DBUtil;
 
 public class BoardDAO {
 	 
@@ -15,7 +14,7 @@ public class BoardDAO {
     public static List<BoardDTO> selectAll() {
         List<BoardDTO> boardList = new ArrayList<>();
         String sql = "SELECT board_id, title, commnet, create_date, update_date, nickname "
-                   + "FROM Board";
+                   + "FROM Board order by board_id";
 
         try (Connection conn = DBUtil.getConnection(); // ✅ 수정
              PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -93,7 +92,6 @@ public class BoardDAO {
 		return result;
 	}
 	
-	
 	public static int SelectId(BoardDTO con) {
 			int result = 0;
 			Connection conn = DBUtil.getConnection();
@@ -136,7 +134,6 @@ public class BoardDAO {
 			result = st.executeUpdate();
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -157,12 +154,9 @@ public class BoardDAO {
 			
 			result = st.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return result;
-		
 	}
 
 	public static BoardDTO selectBoardById(int check) {
@@ -186,12 +180,11 @@ public class BoardDAO {
 						.build();
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return board;
 	}
+	
 	public static int deleteBoardById(int check) {
 		// 글 삭제하기 
 		Connection conn = DBUtil.getConnection();
@@ -206,12 +199,8 @@ public class BoardDAO {
 			
 			result = st.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return result;
 	}
-	
-	
 }
