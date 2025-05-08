@@ -12,13 +12,19 @@ public class BoardView {
 			System.out.println("");
 			System.out.println("해당하는 글번호가 존재하지 않습니다.");
 			System.out.println("");
+			return;
 		}
 		System.out.println("");
 		System.out.println("======== 글 조회 ========");
 		for (BoardDTO e : result) {
             System.out.println("작성자 : "+e.getNickname());
             System.out.println("작성일 : "+e.getCreate_date());
-            System.out.println("수정일 : "+e.getUpdate_date());
+            if(e.getUpdate_date() == null) {
+            	System.out.println("수정일: ");
+            }
+            else {
+            	System.out.println("수정일 : "+e.getUpdate_date());
+            }
             System.out.println("제목 : "+e.getTitle());
             System.out.println("내용 : "+e.getCommnet());
             System.out.println("");
