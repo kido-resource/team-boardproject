@@ -127,7 +127,7 @@ public class BoardDAO {
 		Connection conn = DBUtil.getConnection();
 		PreparedStatement st = null;
 		
-		String sql = "update board set title = ? where board_id = ?";
+		String sql = "update board set title = ?, update_date = sysdate  where board_id = ?";
 		
 		try {
 			st = conn.prepareStatement(sql);
@@ -148,7 +148,7 @@ public class BoardDAO {
 		Connection conn = DBUtil.getConnection();
 		PreparedStatement st = null;
 		
-		String sql = "update board set commnet = ? where board_id = ?";
+		String sql = "update board set commnet = ?, update_date = sysdate where board_id = ?";
 		
 		try {
 			st = conn.prepareStatement(sql);

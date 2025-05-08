@@ -37,7 +37,13 @@ public class BoardView {
 		System.out.print(">>");
 	}
 	
-	public void deleteMenu() {
-		System.out.println();
+	public static void display(List<BoardDTO> result, int i) {
+		System.out.println("======== 글 조회 ==========");
+		System.out.println("글번호 | 제목 | 작성자 | 작성일");
+		result.forEach(dto -> {
+			System.out.printf("%d | %s | %s | %s\n", dto.getBoard_id(), dto.getTitle(), dto.getNickname(),
+					dto.getCreate_date());
+		});
+		
 	}
 }

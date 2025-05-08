@@ -1,5 +1,6 @@
 package com.shinhan.common;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class DeleteController implements CommonControllerInterface {
@@ -8,9 +9,11 @@ public class DeleteController implements CommonControllerInterface {
 	static BoardView view = new BoardView();
 	
 	public void execute() {
-
+		
 		boolean isStop = false;
 		while (!isStop) {
+			List<BoardDTO> result = boardService.selectAll();
+			BoardView.display(result,1);
 			System.out.print("삭제를 원하시는 글번호를 입력하세요. 메인메뉴를 보시려면 0 을 눌러주세요. >>");
 			int check = sc.nextInt();
 			switch (check) {
@@ -25,7 +28,6 @@ public class DeleteController implements CommonControllerInterface {
 	}
 
 	private void deleteboard_selectByID(int check) {
-		// 전체글정보 보여줘야함 
 		boolean isStop = false;
 		System.out.print("정말로 삭제하시겠습니까?(y/n) >> ");
 	
