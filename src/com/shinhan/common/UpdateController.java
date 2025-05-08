@@ -9,9 +9,11 @@ public class UpdateController implements CommonControllerInterface {
 	static BoardView view = new BoardView();
 
 	public void execute() {
-
+	
 		boolean isStop = false;
 		while (!isStop) {
+			List<BoardDTO> result = boardService.selectAll();
+			BoardView.display(result,1);
 			System.out.print("수정을 원하시는 글번호를 입력하세요. 메인메뉴를 보시려면 0 을 눌러주세요. >>");
 			int check = sc.nextInt();
 			switch (check) {
@@ -26,7 +28,6 @@ public class UpdateController implements CommonControllerInterface {
 	}
 
 	private void updateboard_selectByID(int check) {
-		// 전체글 정보도 보여줘야함 
 		boolean isStop = false;
 		// 상세 글정보 보여주기
 		SelectController.board_selectByID(check);
