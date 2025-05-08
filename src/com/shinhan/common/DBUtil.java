@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBUtil {
-	// 김정은 주석 수정해보겠슴돠 
 	// Oracle DB 연결 함수
 	public static Connection getConnection() {
 		Connection conn = null;
@@ -26,7 +25,7 @@ public class DBUtil {
 	}
 
 	// DB 연결시 사용한 자원 해제 함수
-	public static void dbDisconnect(Connection conn, Statement st, ResultSet rs) {
+	public static void dbDisConnect(Connection conn, Statement st, ResultSet rs) {
 		try {
 			if (rs != null) rs.close();
 			if (st != null) st.close();
