@@ -24,4 +24,10 @@ public class BoardView {
             System.out.println("");
         }
 	}
+	
+	public void updateMenu() {
+		System.out.println("-".repeat(30));
+		System.out.println("1. 제목 수정하기\t2. 내용 수정하기\t3. 뒤로가기");
+		System.out.print(">>");
+	}
 }

@@ -11,7 +11,7 @@ public class ControllerFactory {
 		switch(business) {
 		case "insert" -> {controller = new InsertController();}
 		case "select" -> {controller = new SelectController();}
-//		case "update" -> {controller = new UpdateController();}
+		case "update" -> {controller = new UpdateController();}
 //		case "delete" -> {controller = new DeleteController();}
 		}
 		return controller;
