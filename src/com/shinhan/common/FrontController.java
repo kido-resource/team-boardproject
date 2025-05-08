@@ -26,16 +26,13 @@ public class FrontController {
 			}
 			case "5" -> {
 				isStop = true;
-				continue;
-			}
-			default -> {
-				continue;
 			}
 			}
+
 			controller.execute();
+
+			System.out.println("이용해주셔서 감사합니다.");
 		}
-		sc.close();
-		System.out.println("이용해주셔서 감사합니다.");
 	}
 
 	private static void display() {
@@ -47,7 +44,5 @@ public class FrontController {
 		System.out.println("4. 글 삭제");
 		System.out.println("5. 프로그램 종료");
 		System.out.println("================================");
-
 	}
-
 }
