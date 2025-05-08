@@ -6,19 +6,26 @@ import java.util.Scanner;
 import com.shinhan.common.CommonControllerInterface;
 
 public class SelectController implements CommonControllerInterface{
-	
+	 
 	static Scanner sc = new Scanner(System.in);
 	static BoardService insert = new BoardService();
-	
+	private BoardDAO dao = new BoardDAO();
 	public void execute() {
 		
 		boolean isStop = false;
 		while(!isStop) {
+			System.out.println("======== 글 조회 ==========");
+			System.out.println("글번호 | 제목 | 작성자 | 작성일");
+			dao.selectAll().forEach(dto -> {
+				System.out.printf("%d | %s | %s | %s\n", dto.getBoard_id(), dto.getTitle(), dto.getNickname(),
+						dto.getCreate_date());
+			});
 			System.out.print("상세조회할 글번호를 입력하세요. 메인메뉴를 보시려면 0 을 눌러주세요. >>");
 			int check = sc.nextInt();
 			switch(check) {
 			case 0 -> {isStop = true;}
 			default -> {
+				
 				board_selectByID(check);
 				}
 			}

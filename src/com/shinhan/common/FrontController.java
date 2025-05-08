@@ -3,7 +3,7 @@ package com.shinhan.common;
 import java.util.Scanner;
 
 public class FrontController {
-
+ 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		boolean isStop = false;
@@ -26,13 +26,18 @@ public class FrontController {
 			}
 			case "5" -> {
 				isStop = true;
+				continue;
 			}
+			default ->{continue;}
 			}
-
+			
 			controller.execute();
 
-			System.out.println("이용해주셔서 감사합니다.");
+			
 		}
+		sc.close();
+		System.out.println("이용해주셔서 감사합니다.");
+		
 	}
 
 	private static void display() {
