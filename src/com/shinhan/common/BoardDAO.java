@@ -192,6 +192,26 @@ public class BoardDAO {
 		
 		return board;
 	}
+	public static int deleteBoardById(int check) {
+		// 글 삭제하기 
+		Connection conn = DBUtil.getConnection();
+		PreparedStatement st = null;
+		int result = 0;
+		
+		String sql = "delete from board where board_id = ?";
+		
+		try {
+			st = conn.prepareStatement(sql);
+			st.setInt(1, check);
+			
+			result = st.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 	
 	
 }
