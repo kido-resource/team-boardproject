@@ -37,13 +37,13 @@ public class FrontController {
 	}
 
 	private static void display() {
-		System.out.println("======== \"팀이름\" 게시판 ==========");
+		System.out.println("======== 신한 게시판 ==========");
 		System.out.println("1. 글 쓰기");
 		System.out.println("2. 글 조회");
 		System.out.println("3. 글 수정");
 		System.out.println("4. 글 삭제");
 		System.out.println("5. 프로그램 종료");
-		System.out.println("================================");
+		System.out.println("=============================");
 		System.out.print("번호를 입력하세요 >>");
 	}
 }
