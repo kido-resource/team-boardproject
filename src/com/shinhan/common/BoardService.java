@@ -33,4 +33,8 @@ public class BoardService {
 		return BoardDAO.selectBoardById(check);
 	}
 
+	public int deleteBoardById(int check) {
+		return BoardDAO.deleteBoardById(check);
+	}
+
 }

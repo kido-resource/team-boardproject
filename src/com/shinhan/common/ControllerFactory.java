@@ -12,7 +12,7 @@ public class ControllerFactory {
 		case "insert" -> {controller = new InsertController();}
 		case "select" -> {controller = new SelectController();}
 		case "update" -> {controller = new UpdateController();}
-//		case "delete" -> {controller = new DeleteController();}
+		case "delete" -> {controller = new DeleteController();}
 		}
 		return controller;
 	}
