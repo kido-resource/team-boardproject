@@ -7,10 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-
-import dbutil.DBUtil;
-
+import com.shinhan.common.DBUtil;
 
 public class BoardDAO {
 	//select
