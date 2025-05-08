@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBUtil {
-
 	// Oracle DB 연결 함수
 	public static Connection getConnection() {
 		Connection conn = null;
