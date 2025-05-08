@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/openlogic-openjdk-17">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/shinhan5/work/library/lombok.jar"/>
-	<classpathentry kind="lib" path="C:/shinhan5/work/library/ojdbc6_g.jar"/>
-	<classpathentry kind="lib" path="C:/shinhan5/work/library/json-20250107.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Home"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/dms.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/lombok.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/ojdbc11_g.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/ojdbc11dms_g.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/ojdbc11dms.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/ons.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/oraclepki.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/orai18n.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/osdt_cert.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/osdt_core.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/rsi.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/simplefan.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/ucp11.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/Untitled10.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/xdb.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/xmlparserv2_sans_jaxp_services.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Desktop/java/xmlparserv2.jar"/>
+	<classpathentry kind="lib" path="/Users/isanghyeon/Downloads/json-20250107.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
