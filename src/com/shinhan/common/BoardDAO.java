@@ -120,6 +120,78 @@ public class BoardDAO {
 			}
 			return result;
 		}
+
+	public static int updateTitle(BoardDTO board, String newTitle) {
+		// 제목 수정하기 
+		int result = 0;
+		Connection conn = DBUtil.getConnection();
+		PreparedStatement st = null;
+		
+		String sql = "update board set title = ? where board_id = ?";
+		
+		try {
+			st = conn.prepareStatement(sql);
+			st.setString(1, newTitle);
+			st.setInt(2, board.getBoard_id());
+			result = st.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public static int updateComment(BoardDTO board, String newComment) {
+		// 내용 수정하기 
+		int result = 0;
+		Connection conn = DBUtil.getConnection();
+		PreparedStatement st = null;
+		
+		String sql = "update board set commnet = ? where board_id = ?";
+		
+		try {
+			st = conn.prepareStatement(sql);
+			st.setString(1, newComment);
+			st.setInt(2, board.getBoard_id());
+			
+			result = st.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return result;
+		
+	}
+
+	public static BoardDTO selectBoardById(int check) {
+		Connection conn = DBUtil.getConnection();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		BoardDTO board = null;
+		String sql = "select * from board where board_id = ?";
+		try {
+			st = conn.prepareStatement(sql);
+			st.setInt(1, check);
+			rs = st.executeQuery();
+			
+			while(rs.next()) {
+				board = BoardDTO.builder()
+						.board_id(rs.getInt("board_id"))
+						.commnet(rs.getString("commnet"))
+						.create_date(rs.getString("create_date"))
+						.nickname(rs.getString("nickname"))
+						.update_date(rs.getString("update_date"))
+						.build();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return board;
+	}
 	
 	
 }

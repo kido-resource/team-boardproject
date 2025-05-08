@@ -32,8 +32,7 @@ public class SelectController implements CommonControllerInterface{
 		}
 	}
 
-	private static void board_selectByID(Integer board_id) {
-		
+	public static void board_selectByID(Integer board_id) {
 		BoardDTO insert = BoardDTO.builder()
 				.board_id(board_id)
 				.build();
