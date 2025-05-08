@@ -1,7 +1,7 @@
 package com.shinhan.common;
 
 import java.util.List;
-
+ 
 public class BoardService {
 	public static List<BoardDTO> SelectBoardId(BoardDTO insert) {
 		return BoardDAO.SelectBoardId(insert);

@@ -10,7 +10,7 @@ import java.util.List;
 import com.shinhan.common.DBUtil;
 
 public class BoardDAO {
-	
+	 
 	  // 2. 글 전체 조회
     public static List<BoardDTO> selectAll() {
         List<BoardDTO> boardList = new ArrayList<>();

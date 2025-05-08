@@ -1,7 +1,7 @@
 package com.shinhan.common;
 
 import java.util.List;
-
+ 
 public class BoardView {
 	public static void display(String message) {
 		System.out.println(message);

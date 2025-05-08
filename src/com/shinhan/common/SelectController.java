@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.shinhan.common.CommonControllerInterface;
 
 public class SelectController implements CommonControllerInterface{
-	
+	 
 	static Scanner sc = new Scanner(System.in);
 	static BoardService insert = new BoardService();
 	private BoardDAO dao = new BoardDAO();
